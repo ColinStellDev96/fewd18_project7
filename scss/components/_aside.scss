@@ -1,4 +1,21 @@
-aside {
-    background-color: #000;
-    color: white;
+.side-nav {
+    @include flex();
+    justify-content: space-between;
+    background-color: $tan-light;
+    width: auto;
+
+    @include mq (medium) {
+        display: block;
+    }
+}
+
+.side-nav-icon {
+    fill: $cigar;
+    height: em(40px);
+    padding: em(17px) em(10px);
+
+    @include mq (medium) {
+        display: block;
+        margin: 0 auto;
+    }
 }

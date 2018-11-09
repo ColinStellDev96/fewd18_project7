@@ -1,4 +1,133 @@
 nav {
-    background-color: #000;
-    color: white;
+    background-color: $cigar;
+    color: $white;
+    @include flex();
+    justify-content: space-between;
+}
+
+.logo-section {
+    display: table;
+}
+
+.logo {
+    vertical-align: middle;
+    display: table-cell;
+    height: em(50px);
+    margin-left: em(10px);
+    margin-top: em(13px);
+}
+
+.logo-text {
+    vertical-align: middle;
+    display: table-cell;
+    font-family: $font-family--logoPrimary;
+    font-size: em(20px);
+    color: $white;
+    text-align: center;
+    padding-left: em(10px);
+    padding-top: em(10px);
+
+    @include mq (medium) {
+        font-size: em(28px);
+    }
+}
+
+.nav-user {
+    @include flex();
+}
+
+.bell-icon {
+    position: relative;
+}
+
+.bell-icon[data-badge]::after {
+    content: attr(data-badge);
+    position: absolute;
+    top: em(15px);
+    right: em(15px);
+    font-size: em(14px);
+    background: $tan-light;
+    color: $cigar;
+    width: em(15px);
+    height: em(15px);
+    text-align: center;
+    line-height: em(16px);
+    border-radius: 50%;
+
+    @include mq (medium) {
+        top: em(15px);
+        right: em(10px);
+        font-size: em(18px);
+    }
+}
+
+#bell {
+    margin: em(10px);
+    margin-top: em(20px);
+    display: inline-block;
+    height: em(30px);
+    fill: $white;
+
+    @include mq (medium) {
+        margin-top: em(25px);
+    }
+}
+
+.main-user {
+    display: table;
+    margin: 0 em(10px);
+}
+
+.main-user-img {
+    vertical-align: middle;
+    display: table-cell;
+    height: em(50px);
+    border-radius: em(10px);
+    margin-top: em(13px);
+}
+
+.main-user-name {
+    vertical-align: middle;
+    display: table-cell;
+    color: $white;
+    text-align: center;
+    font-size: em(14px);
+    padding-left: em(5px);
+    padding-top: em(20px);
+
+    @include mq (medium) {
+        font-size: em(20px);
+        padding-top: em(10px);
+    }
+}
+
+.dash-head {
+    @include flex();
+    justify-content: space-between;
+}
+
+.dash-head h3 {
+    display: inline-block;
+    margin: em(10px) 0;
+    border-right: solid em(1px) $cigar;
+    padding-top: em(3px);
+    padding-right: em(10px);
+}
+
+.search-input {
+    position: relative;
+    margin: em(15px) 0;
+    font-size: em(14px);
+}
+
+.search-input .fa-search {
+    position: absolute;
+    top: em(8px);
+    right: em(7px);
+    font-size: em(14px);
+    color: $cigar;
+}
+
+#site-search {
+    width: em(220px);
 }
