@@ -2,16 +2,22 @@ main {
     margin: 0 em(10px);
 }
 
-.traffic-graph,
-.daily-graph,
-.mobile-users,
-.social-stats,
-.new-members,
-.recent-activity,
-.message-user,
-.settings {
-    background-color: white;
-    opacity: .3;
-    border-radius: 5px;
-    color: black;
+.section-head {
+    text-transform: uppercase;
+    margin: 5px 0;
 }
+
+.traffic-nav {
+    @include flex();
+    justify-content: space-between;
+}
+
+.traffic-nav ul li {
+   list-style: none;
+   display: inline-block;
+   padding: 0 em(3px);
+   margin-top: em(10px);
+   text-transform: uppercase;
+   font-size: em(10px);
+}
+

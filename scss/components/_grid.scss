@@ -43,6 +43,7 @@ main {
     grid-gap: 1px;
     grid-template-areas:
         "dash"
+        "alert"
         "traffic"
         "daily"
         "mobile"
@@ -57,6 +58,7 @@ main {
         grid-template-rows: 75px 300px 300px 150px 300px 300px;
         grid-template-areas:
             "dash dash"
+            "alert alert"
             "traffic traffic"
             "daily mobile"
             "social social"
@@ -69,6 +71,10 @@ main {
 
 .dash-head {
     grid-area: dash;
+}
+
+.alert {
+    grid-area: alert;
 }
 
 .traffic-graph {

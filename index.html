@@ -118,8 +118,27 @@
                     <input type="search" id="site-search" name="" placeholder="Search">
                 </div>
             </div>
+            <div class="alert">
+                <p class="alert-box"> ALERT: 5 friends liked your "The Judge" check-in!
+                    <i class="fas fa-times close-alert"></i>
+                </p>
+            </div>
+
             <!--END DASH/SEARCH INPUT-->
-            <div class='traffic-graph'>Traffic Graph</div>
+            <div class='traffic-graph'>
+                <!--TRAFFIC GRAPH-->
+                <div class="traffic-nav">
+                    <h5 class="section-head">Traffic</h5>
+                    <ul>
+                        <li class="hourly">Hourly</li>
+                        <li class="daily">Daily</li>
+                        <li class="weekly">Weekly</li>
+                        <li class="monthly">Monthly</li>
+                    </ul>
+                </div>
+                <canvas id="trafficChart"></canvas>
+            </div>
+            <!--END TRAFFIC GRAPH-->
             <div class='daily-graph'>Daily</div>
             <div class='mobile-users'>Mobile</div>
             <div class='social-stats'>Social Stats</div>
@@ -127,11 +146,12 @@
             <div class='recent-activity'>Recent Activity</div>
             <div class='message-user'>Message User</div>
             <div class='settings'>Settings</div>
-            <div></div>
         </main>
         <footer>Footer</footer>
     </div>
-
+    <!--END APP CONTAINER-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>

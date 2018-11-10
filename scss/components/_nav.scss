@@ -131,3 +131,25 @@ nav {
 #site-search {
     width: em(220px);
 }
+
+.alert-box {
+    @include flex();
+    justify-content: space-between;
+    width: 97%;
+    margin: em(10px) em(5px);
+    padding: em(6px) em(4px);
+    font-size: 12px;
+    color: $tan-light;
+    background-color: $cigar;
+    border-radius: em(4px);
+}
+
+.alert-box span {
+    font-weight: bold;
+}
+
+.alert-box i {
+    margin-left: em(20px);
+    margin-right: em(4px);
+    margin-top: em(2px);
+}
