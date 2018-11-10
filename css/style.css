@@ -545,8 +545,223 @@ canvas {
   text-transform: uppercase;
   font-size: 0.625em; }
 
+#social-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.625em; }
+
+.social-widget {
+  display: flex;
+  display: inline-block;
+  background-color: #e0d4ba;
+  padding: 0.3125em 0.3125em;
+  border-radius: 0.3125em; }
+
+.social-icon {
+  display: block;
+  margin: 0 auto;
+  fill: #e0d4ba;
+  height: 1.875em;
+  width: 1.875em;
+  padding: 0.3125em;
+  background-color: #362919;
+  border-radius: 0.625em; }
+
+.social-content {
+  margin: 0 0.9375em; }
+
+.social-content h5,
+.social-content p {
+  margin: 0;
+  text-align: center; }
+
+.social-content h5 {
+  color: #362919;
+  margin-top: 0.625em;
+  margin-bottom: 0.625em; }
+
+.social-content p {
+  font-size: 1.5em; }
+
+.member-section {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #362919;
+  margin-bottom: 0.625em; }
+
+.member-section img {
+  height: 3.75em;
+  width: 3.75em;
+  border-radius: 0.625em; }
+
+.member-info {
+  width: 10.625em;
+  padding-left: 0.3125em; }
+
+.member-info h5 {
+  margin-bottom: 0;
+  color: #362919; }
+
+.member-info p {
+  margin-top: 0; }
+
+.date-join {
+  font-size: 0.8125em;
+  font-weight: bold;
+  color: #d17300; }
+
+.activity-section {
+  display: flex;
+  border-bottom: 1px solid #362919;
+  margin-bottom: 0.625em; }
+
+.activity-section img {
+  height: 3.75em;
+  width: 3.75em;
+  border-radius: 0.625em;
+  margin-bottom: 0.625em; }
+
+.activity-info {
+  margin-left: 0.625em; }
+
+.member-activity {
+  margin-bottom: 0;
+  font-size: 0.875em; }
+
+.member-time {
+  margin-top: 0;
+  font-size: 0.8125em;
+  font-weight: bold;
+  color: #d17300; }
+
+#user-search {
+  margin-bottom: 0.625em;
+  padding: 0.3125em;
+  width: 100%;
+  background-color: #e0d4ba;
+  border: 0.0625em solid #362919;
+  border-radius: 0.1875em; }
+
+#member-search-text {
+  resize: none;
+  margin-bottom: 0.625em;
+  padding: 0.3125em;
+  width: 96%;
+  height: 6.25em;
+  background-color: #e0d4ba;
+  border: 0.0625em solid #362919;
+  border-radius: 0.1875em; }
+
+#user-send {
+  width: 100%;
+  text-align: center;
+  background-color: #362919;
+  color: #e0d4ba;
+  font-size: 0.875em;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.625em 0.3125em;
+  border-radius: 0.1875em; }
+
+.settings p {
+  display: inline-block;
+  width: 10.5em; }
+
+.onoffswitch {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1.875em;
+  position: relative;
+  width: 90px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
+
+.onoffswitch-checkbox {
+  display: none; }
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0.125em solid #e0d4ba;
+  border-radius: 0.625em; }
+
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s; }
+
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 2.5em;
+  padding: 0;
+  line-height: 2.5em;
+  font-size: 0.8125em;
+  color: #e0d4ba;
+  font-weight: bold;
+  box-sizing: border-box; }
+
+.onoffswitch-inner:before {
+  content: "ON";
+  padding-left: 0.625em;
+  background-color: #362919;
+  color: #e0d4ba; }
+
+.onoffswitch-inner:after {
+  content: "OFF";
+  padding-right: 0.625em;
+  background-color: #EEEEEE;
+  color: #362919;
+  text-align: right; }
+
+.onoffswitch-switch {
+  display: block;
+  width: 1.25em;
+  margin: 0.375em;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 3.5em;
+  border: 2px solid #e0d4ba;
+  border-radius: 0.625em;
+  transition: all 0.3s ease-in 0s; }
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0; }
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0; }
+
+#settings-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.625em 0; }
+
+.settings-button {
+  width: 10em;
+  text-align: center;
+  font-size: 0.875em;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.625em 0.3125em;
+  border-radius: 0.1875em; }
+
+#settings-save {
+  background-color: #362919;
+  color: #e0d4ba; }
+
+#settings-cancel {
+  background-color: #e0d4ba;
+  color: #362919; }
+
 footer {
-  background-color: #000;
-  color: white; }
+  text-align: center;
+  margin: 0.3125em 0; }
 
 /*# sourceMappingURL=style.css.map */

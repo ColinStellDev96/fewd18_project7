@@ -17,11 +17,267 @@ canvas {
 }
 
 .traffic-nav ul li {
-   list-style: none;
-   display: inline-block;
-   padding: 0 em(3px);
-   margin-top: em(10px);
-   text-transform: uppercase;
-   font-size: em(10px);
+    list-style: none;
+    display: inline-block;
+    padding: 0 em(3px);
+    margin-top: em(10px);
+    text-transform: uppercase;
+    font-size: em(10px);
 }
 
+#social-stats {
+    @include flex();
+    justify-content: space-between;
+    margin-bottom: em(10px);
+}
+
+.social-widget {
+    @include flex();
+    display: inline-block;
+    background-color: $tan-light;
+    padding: em(5px) em(5px);
+    border-radius: em(5px);
+}
+
+.social-icon {
+    display: block;
+    margin: 0 auto;
+    fill: $tan-light;
+    height: em(30px);
+    width: em(30px);
+    padding: em(5px);
+    background-color: $cigar;
+    border-radius: em(10px);
+}
+
+.social-content {
+    margin: 0 em(15px);
+}
+
+.social-content h5,
+.social-content p {
+    margin: 0;
+    text-align: center;
+}
+
+.social-content h5 {
+    color: $cigar;
+    margin-top: em(10px);
+    margin-bottom: em(10px);
+}
+
+.social-content p {
+    font-size: em(24px);
+}
+
+.member-section {
+    @include flex();
+    justify-content: space-between;
+    border-bottom: 1px solid $cigar;
+    margin-bottom: em(10px);
+}
+
+.member-section img {
+    height: em(60px);
+    width: em(60px);
+    border-radius: em(10px);
+}
+
+.member-info {
+    width: em(170px);
+    padding-left: em(5px);
+}
+
+.member-info h5 {
+    margin-bottom: 0;
+    color: $cigar;
+}
+
+.member-info p {
+    margin-top: 0;
+}
+
+.date-join {
+    font-size: em(13px);
+    font-weight: bold;
+    color: $orange;
+}
+
+// RECENT ACTIVITY
+
+.activity-section {
+    @include flex();
+    border-bottom: 1px solid $cigar;
+    margin-bottom: em(10px);
+}
+
+.activity-section img {
+    height: em(60px);
+    width: em(60px);
+    border-radius: em(10px);
+    margin-bottom: em(10px);
+}
+
+.activity-info {
+    margin-left: em(10px);
+}
+
+.member-activity {
+    margin-bottom: 0;
+    font-size: em(14px);
+}
+
+.member-time {
+    margin-top: 0;
+    font-size: em(13px);
+    font-weight: bold;
+    color: $orange;
+}
+
+// MESSAGE USER
+
+#user-search {
+    margin-bottom: em(10px);
+    padding: em(5px);
+    width: 100%;
+    background-color: $tan-light;
+    border: em(1px) solid $cigar;
+    border-radius: em(3px);
+}
+
+#member-search-text {
+    resize: none;
+    margin-bottom: em(10px);
+    padding: em(5px);
+    width: 96%;
+    height: em(100px);
+    background-color: $tan-light;
+    border: em(1px) solid $cigar;
+    border-radius: em(3px);
+}
+
+#user-send {
+    width: 100%;
+    text-align: center;
+    background-color: $cigar;
+    color: $tan-light;
+    font-size: em(14px);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: em(10px) em(5px);
+    border-radius: em(3px);
+}
+
+// SETTINGS
+
+.settings p {
+    display: inline-block;
+    width: em(168px);
+}
+
+.onoffswitch {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: em(30px);
+    position: relative;
+    width: 90px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: em(2px) solid $tan-light;
+    border-radius: em(10px);
+}
+
+.onoffswitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: em(40px);
+    padding: 0;
+    line-height: em(40px);
+    font-size: em(13px);
+    color: $tan-light;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: em(10px);
+    background-color: $cigar;
+    color: $tan-light;
+}
+
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: em(10px);
+    background-color: #EEEEEE;
+    color: $cigar;
+    text-align: right;
+}
+
+.onoffswitch-switch {
+    display: block;
+    width: em(20px);
+    margin: em(6px);
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: em(56px);
+    border: 2px solid $tan-light;
+    border-radius: em(10px);
+    transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+    right: 0;
+}
+
+#settings-buttons {
+    @include flex();
+    justify-content: space-between;
+    margin: em(10px) 0;
+}
+
+.settings-button {
+    width: em(160px);
+    text-align: center;
+    font-size: em(14px);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: em(10px) em(5px);
+    border-radius: em(3px);
+}
+
+#settings-save {
+    background-color: $cigar;
+    color: $tan-light;
+}
+
+#settings-cancel {
+    background-color: $tan-light;
+    color: $cigar;
+}
