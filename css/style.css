@@ -526,6 +526,9 @@ nav {
 main {
   margin: 0 0.625em; }
 
+canvas {
+  margin-top: 0.625em; }
+
 .section-head {
   text-transform: uppercase;
   margin: 5px 0; }
