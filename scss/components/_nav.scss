@@ -14,7 +14,7 @@ nav {
     display: table-cell;
     height: em(50px);
     margin-left: em(10px);
-    margin-top: em(13px);
+    margin-top: em(7px);
 }
 
 .logo-text {
@@ -25,7 +25,7 @@ nav {
     color: $white;
     text-align: center;
     padding-left: em(10px);
-    padding-top: em(10px);
+    padding-top: em(5px);
 
     @include mq (medium) {
         font-size: em(28px);
@@ -83,7 +83,7 @@ nav {
     display: table-cell;
     height: em(50px);
     border-radius: em(10px);
-    margin-top: em(13px);
+    margin-top: em(7px);
 }
 
 .main-user-name {

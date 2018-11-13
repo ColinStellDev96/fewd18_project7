@@ -2,8 +2,8 @@
     height: auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-auto-rows: minmax(75px);
-    grid-gap: 5px;
+    grid-template-rows: minmax(75px);
+    // grid-gap: 5px;
     grid-template-areas:
         "navigation"
         "aside"
@@ -39,8 +39,8 @@ footer {
 main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-auto-rows: minmax(50px, auto);
-    grid-gap: 1px;
+    grid-template-rows: minmax(50px, auto);
+    // grid-gap: 1px;
     grid-template-areas:
         "dash"
         "alert"
@@ -105,6 +105,6 @@ main {
     grid-area: message;
 }
 
-.settings {
+#settings {
     grid-area: settings;
 }

@@ -170,90 +170,83 @@ canvas {
 
 // SETTINGS
 
-.settings p {
+#settings p {
     display: inline-block;
-    width: em(168px);
+    width: em(165px);
 }
 
-.onoffswitch {
+.on-off {
     display: inline-block;
-    vertical-align: middle;
-    margin-left: em(30px);
-    position: relative;
-    width: 90px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    margin-left: 40px;
 }
 
-.onoffswitch-checkbox {
+.checkbox {
     display: none;
 }
 
-.onoffswitch-label {
-    display: block;
-    overflow: hidden;
-    cursor: pointer;
-    border: em(2px) solid $tan-light;
-    border-radius: em(10px);
-}
-
-.onoffswitch-inner {
-    display: block;
-    width: 200%;
-    margin-left: -100%;
-    transition: margin 0.3s ease-in 0s;
-}
-
-.onoffswitch-inner:before,
-.onoffswitch-inner:after {
-    display: block;
-    float: left;
-    width: 50%;
-    height: em(40px);
-    padding: 0;
-    line-height: em(40px);
-    font-size: em(13px);
-    color: $tan-light;
-    font-weight: bold;
-    box-sizing: border-box;
-}
-
-.onoffswitch-inner:before {
-    content: "ON";
-    padding-left: em(10px);
+.switch {
+    @include flex();
+    justify-content: space-between;
+    align-items: center;
     background-color: $cigar;
-    color: $tan-light;
-}
-
-.onoffswitch-inner:after {
-    content: "OFF";
-    padding-right: em(10px);
-    background-color: #EEEEEE;
-    color: $cigar;
-    text-align: right;
-}
-
-.onoffswitch-switch {
-    display: block;
-    width: em(20px);
-    margin: em(6px);
-    background: #FFFFFF;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: em(56px);
-    border: 2px solid $tan-light;
     border-radius: em(10px);
-    transition: all 0.3s ease-in 0s;
+    cursor: pointer;
+    height: em(30px);
+    padding: 0 em(10px);
+    position: relative;
+    user-select: none;
+    width: em(70px);
 }
 
-.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
-    margin-left: 0;
+.checkbox:checked ~ .switch {
+    background-color: $cigar;
 }
 
-.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+.checkbox:not(:checked) ~ .switch {
+    background-color: $tan-light;
+}
+
+.switch-left {
+    color: $cigar;
+    text-transform: uppercase;
+}
+.switch-right {
+    color: $white;
+    text-transform: uppercase;
+}
+
+.checkbox:checked ~ .switch .switch_left {
+    visibility: hidden;
+}
+
+.checkbox:not(:checked) ~ .switch .switch_right {
+    visibility: hidden;
+}
+
+.switch_circle {
+    height: 25px;
+    padding: 4px;
+    position: absolute;
+    transition: all 0.1s linear;
+    width: 30px;
+}
+
+.checkbox:checked ~ .switch .switch_circle {
+    left: 0;
+    right: calc(100% - 40px)
+;}
+
+.checkbox:not(:checked) ~ .switch .switch_circle {
+    left: calc(100% - 40px);
     right: 0;
+}
+
+.switch_circle-inner {
+    background-color: $white;
+    border-radius: 30%;
+    display: block;
+    height: 100%;
+    width: 100%; 
 }
 
 #settings-buttons {

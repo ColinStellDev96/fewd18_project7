@@ -309,8 +309,7 @@ ul {
   height: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: minmax(75px);
-  grid-gap: 5px;
+  grid-template-rows: minmax(75px);
   grid-template-areas: "navigation" "aside" "main" "footer"; }
   @media (min-width: 768px) {
     .container {
@@ -333,8 +332,7 @@ footer {
 main {
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: minmax(50px, auto);
-  grid-gap: 1px;
+  grid-template-rows: minmax(50px, auto);
   grid-template-areas: "dash" "alert" "traffic" "daily" "mobile" "social" "members" "activity" "message" "settings"; }
   @media (min-width: 768px) {
     main {
@@ -369,7 +367,7 @@ main {
 .message-user {
   grid-area: message; }
 
-.settings {
+#settings {
   grid-area: settings; }
 
 nav {
@@ -386,7 +384,7 @@ nav {
   display: table-cell;
   height: 3.125em;
   margin-left: 0.625em;
-  margin-top: 0.8125em; }
+  margin-top: 0.4375em; }
 
 .logo-text {
   vertical-align: middle;
@@ -396,7 +394,7 @@ nav {
   color: #f8f7f7;
   text-align: center;
   padding-left: 0.625em;
-  padding-top: 0.625em; }
+  padding-top: 0.3125em; }
   @media (min-width: 768px) {
     .logo-text {
       font-size: 1.75em; } }
@@ -445,7 +443,7 @@ nav {
   display: table-cell;
   height: 3.125em;
   border-radius: 0.625em;
-  margin-top: 0.8125em; }
+  margin-top: 0.4375em; }
 
 .main-user-name {
   vertical-align: middle;
@@ -663,80 +661,71 @@ canvas {
   padding: 0.625em 0.3125em;
   border-radius: 0.1875em; }
 
-.settings p {
+#settings p {
   display: inline-block;
-  width: 10.5em; }
+  width: 10.3125em; }
 
-.onoffswitch {
+.on-off {
   display: inline-block;
-  vertical-align: middle;
-  margin-left: 1.875em;
-  position: relative;
-  width: 90px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none; }
+  margin-left: 40px; }
 
-.onoffswitch-checkbox {
+.checkbox {
   display: none; }
 
-.onoffswitch-label {
-  display: block;
-  overflow: hidden;
-  cursor: pointer;
-  border: 0.125em solid #e0d4ba;
-  border-radius: 0.625em; }
-
-.onoffswitch-inner {
-  display: block;
-  width: 200%;
-  margin-left: -100%;
-  transition: margin 0.3s ease-in 0s; }
-
-.onoffswitch-inner:before,
-.onoffswitch-inner:after {
-  display: block;
-  float: left;
-  width: 50%;
-  height: 2.5em;
-  padding: 0;
-  line-height: 2.5em;
-  font-size: 0.8125em;
-  color: #e0d4ba;
-  font-weight: bold;
-  box-sizing: border-box; }
-
-.onoffswitch-inner:before {
-  content: "ON";
-  padding-left: 0.625em;
+.switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #362919;
-  color: #e0d4ba; }
-
-.onoffswitch-inner:after {
-  content: "OFF";
-  padding-right: 0.625em;
-  background-color: #EEEEEE;
-  color: #362919;
-  text-align: right; }
-
-.onoffswitch-switch {
-  display: block;
-  width: 1.25em;
-  margin: 0.375em;
-  background: #FFFFFF;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 3.5em;
-  border: 2px solid #e0d4ba;
   border-radius: 0.625em;
-  transition: all 0.3s ease-in 0s; }
+  cursor: pointer;
+  height: 1.875em;
+  padding: 0 0.625em;
+  position: relative;
+  user-select: none;
+  width: 4.375em; }
 
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-  margin-left: 0; }
+.checkbox:checked ~ .switch {
+  background-color: #362919; }
 
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+.checkbox:not(:checked) ~ .switch {
+  background-color: #e0d4ba; }
+
+.switch-left {
+  color: #362919;
+  text-transform: uppercase; }
+
+.switch-right {
+  color: #f8f7f7;
+  text-transform: uppercase; }
+
+.checkbox:checked ~ .switch .switch_left {
+  visibility: hidden; }
+
+.checkbox:not(:checked) ~ .switch .switch_right {
+  visibility: hidden; }
+
+.switch_circle {
+  height: 25px;
+  padding: 4px;
+  position: absolute;
+  transition: all 0.1s linear;
+  width: 30px; }
+
+.checkbox:checked ~ .switch .switch_circle {
+  left: 0;
+  right: calc(100% - 40px); }
+
+.checkbox:not(:checked) ~ .switch .switch_circle {
+  left: calc(100% - 40px);
   right: 0; }
+
+.switch_circle-inner {
+  background-color: #f8f7f7;
+  border-radius: 30%;
+  display: block;
+  height: 100%;
+  width: 100%; }
 
 #settings-buttons {
   display: flex;
