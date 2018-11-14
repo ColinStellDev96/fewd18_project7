@@ -12,7 +12,7 @@
 
     @include mq (medium) {
         grid-template-columns: minmax(75px, auto) 1fr 17fr;
-        grid-template-rows: em(75px) minmax(75px, auto) 75px;
+        grid-template-rows: em(75px) minmax(75px, auto) 30px;
         grid-template-areas:
             "navigation navigation navigation"
             "aside main main"
@@ -40,7 +40,7 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(50px, auto);
-    // grid-gap: 1px;
+    grid-gap: 5px;
     grid-template-areas:
         "dash"
         "alert"
@@ -54,8 +54,8 @@ main {
         "settings";
 
     @include mq (medium) {
-        grid-template-columns: minmax(767px, auto) 1fr;
-        grid-template-rows: 75px 300px 300px 150px 300px 300px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 50px 400px 200px 150px 350px 250px;
         grid-template-areas:
             "dash dash"
             "alert alert"

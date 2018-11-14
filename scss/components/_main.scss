@@ -8,7 +8,7 @@ canvas {
 
 .section-head {
     text-transform: uppercase;
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 .traffic-nav {
@@ -75,6 +75,7 @@ canvas {
     justify-content: space-between;
     border-bottom: 1px solid $cigar;
     margin-bottom: em(10px);
+    height: em(72px);
 }
 
 .member-section img {
@@ -105,10 +106,17 @@ canvas {
 
 // RECENT ACTIVITY
 
+.recent-activity {
+    @include mq (medium) {
+        margin-left: em(10px);
+    }
+}
+
 .activity-section {
     @include flex();
     border-bottom: 1px solid $cigar;
     margin-bottom: em(10px);
+    height: em(72px);
 }
 
 .activity-section img {
@@ -170,6 +178,12 @@ canvas {
 
 // SETTINGS
 
+#settings {
+    @include mq (medium) {
+        margin-left: em(10px);
+    }
+}
+
 #settings p {
     display: inline-block;
     width: em(165px);
@@ -181,9 +195,12 @@ canvas {
     padding-left: em(30px);
     position: relative;
     width: em(90px);
-    -webkit-user-select:none; 
-    -moz-user-select:none; 
+    -webkit-user-select: none;
+    -moz-user-select: none;
     -ms-user-select: none;
+    @include mq (medium) {
+        padding-left: em(90px);
+    }
 }
 
 .onoffswitch-checkbox {
@@ -248,11 +265,21 @@ canvas {
     transition: all 0.3s ease-in 0s;
 }
 
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
     margin-left: 0;
 }
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-    right: 0px; 
+
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
+#DropDownTimezone {
+    width: 100%;
+    background-color: $tan-light;
+    color: $cigar;
+    @include mq (medium) {
+        margin-top: em(20px);
+    }
 }
 
 #settings-buttons {
@@ -269,6 +296,9 @@ canvas {
     font-weight: bold;
     padding: em(10px) em(5px);
     border-radius: em(3px);
+    @include mq (medium) {
+        margin-top: em(16px);
+    }
 }
 
 #settings-save {
