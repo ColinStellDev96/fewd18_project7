@@ -665,67 +665,76 @@ canvas {
   display: inline-block;
   width: 10.3125em; }
 
-.on-off {
+.onoffswitch {
   display: inline-block;
-  margin-left: 40px; }
+  vertical-align: middle;
+  padding-left: 1.875em;
+  position: relative;
+  width: 5.625em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
 
-.checkbox {
+.onoffswitch-checkbox {
   display: none; }
 
-.switch {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #362919;
-  border-radius: 0.625em;
-  cursor: pointer;
-  height: 1.875em;
-  padding: 0 0.625em;
-  position: relative;
-  user-select: none;
-  width: 4.375em; }
-
-.checkbox:checked ~ .switch {
-  background-color: #362919; }
-
-.checkbox:not(:checked) ~ .switch {
-  background-color: #e0d4ba; }
-
-.switch-left {
-  color: #362919;
-  text-transform: uppercase; }
-
-.switch-right {
-  color: #f8f7f7;
-  text-transform: uppercase; }
-
-.checkbox:checked ~ .switch .switch_left {
-  visibility: hidden; }
-
-.checkbox:not(:checked) ~ .switch .switch_right {
-  visibility: hidden; }
-
-.switch_circle {
-  height: 25px;
-  padding: 4px;
-  position: absolute;
-  transition: all 0.1s linear;
-  width: 30px; }
-
-.checkbox:checked ~ .switch .switch_circle {
-  left: 0;
-  right: calc(100% - 40px); }
-
-.checkbox:not(:checked) ~ .switch .switch_circle {
-  left: calc(100% - 40px);
-  right: 0; }
-
-.switch_circle-inner {
-  background-color: #f8f7f7;
-  border-radius: 30%;
+.onoffswitch-label {
   display: block;
-  height: 100%;
-  width: 100%; }
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #e0d4ba;
+  border-radius: 0.5em; }
+
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s; }
+
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 1.875em;
+  padding: 0;
+  line-height: 1.875em;
+  font-size: 0.875em;
+  color: #f8f7f7;
+  font-weight: bold;
+  box-sizing: border-box; }
+
+.onoffswitch-inner:before {
+  content: "OFF";
+  padding-left: 0.625em;
+  background-color: #362919;
+  color: #e0d4ba; }
+
+.onoffswitch-inner:after {
+  content: "ON";
+  padding-right: 10px;
+  background-color: #e0d4ba;
+  color: #362919;
+  text-align: right; }
+
+.onoffswitch-switch {
+  display: block;
+  width: 17px;
+  margin: 6.5px;
+  background: #f8f7f7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 3.5em;
+  border: 1px solid #362919;
+  border-radius: 0.5em;
+  transition: all 0.3s ease-in 0s; }
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0; }
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px; }
 
 #settings-buttons {
   display: flex;
