@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const traffic = document.getElementById("trafficChart");
     const daily = document.getElementById("dailyChart");
     const users = document.getElementById("usersChart");
+    const secNav = document.getElementById('secondNav').getElementsByTagName('li');
+    const alert = document.getElementById('alert');
+    const alertClose = alert.querySelector('i');
 
     // CHART DATA
     const hourlyLables = ['9am', '10pm', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
@@ -133,4 +136,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }
         }
     })
-});
+
+    // ALERT CLOSE
+    alertClose.addEventListener('click', function () {
+        alert.style.display = "none";
+    });
+
+    // CHANGE ACTIVE STATE ON GRAPH NAVIGATION
+
+    for (var i = 0; i < secNav.length; i++) {
+        secNav[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+
+}); // END OF JAVASCRIPT DOM CONTENT LOADER

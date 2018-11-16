@@ -349,7 +349,7 @@ main {
 .dash-head {
   grid-area: dash; }
 
-.alert {
+#alert {
   grid-area: alert; }
 
 .traffic-graph {
@@ -511,9 +511,9 @@ nav {
   color: #e0d4ba;
   background-color: #362919;
   border-radius: 0.25em; }
-
-.alert-box span {
-  font-weight: bold; }
+  @media (min-width: 768px) {
+    .alert-box {
+      width: 98%; } }
 
 .alert-box i {
   margin-left: 1.25em;
@@ -559,7 +559,14 @@ canvas {
   padding: 0 0.1875em;
   margin-top: 0.625em;
   text-transform: uppercase;
-  font-size: 0.625em; }
+  font-size: 0.625em;
+  cursor: pointer; }
+  @media (min-width: 768px) {
+    .traffic-nav ul li {
+      font-size: 0.875em; } }
+
+.active {
+  border-bottom: 2px solid #d17300; }
 
 @media (min-width: 768px) {
   #trafficChart {

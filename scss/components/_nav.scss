@@ -158,10 +158,10 @@ nav {
     color: $tan-light;
     background-color: $cigar;
     border-radius: em(4px);
-}
 
-.alert-box span {
-    font-weight: bold;
+    @include mq (medium) {
+        width: 98%;
+    }
 }
 
 .alert-box i {

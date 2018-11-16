@@ -119,7 +119,7 @@
                     <input type="search" id="site-search" name="" placeholder="Search">
                 </div>
             </div>
-            <div class="alert">
+            <div id="alert">
                 <p class="alert-box"> ALERT: 5 friends liked your "The Judge" check-in!
                     <i class="fas fa-times close-alert"></i>
                 </p>
@@ -130,12 +130,14 @@
                 <!--TRAFFIC GRAPH-->
                 <div class="traffic-nav">
                     <h5 class="section-head">Traffic</h5>
-                    <ul>
-                        <li class="hourly">Hourly</li>
-                        <li class="daily">Daily</li>
-                        <li class="weekly">Weekly</li>
-                        <li class="monthly">Monthly</li>
-                    </ul>
+                    <div>
+                        <ul id="secondNav">
+                            <li class="hourly">Hourly</li>
+                            <li class="daily">Daily</li>
+                            <li class="weekly">Weekly</li>
+                            <li class="monthly active">Monthly</li>
+                        </ul>
+                    </div>
                 </div>
                 <canvas id="trafficChart"></canvas>
             </div>
@@ -306,6 +308,7 @@
             </div>
             <!--END Message User-->
             <!--Settings-->
+            <!--Toggle Buttons Sourced and Customized From: "https://proto.io/freebies/onoff/"-->
             <div id='settings'>
                 <h5 class="section-head">Settings</h5>
                 <p>Send Email Notifications</p>
