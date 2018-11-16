@@ -308,6 +308,8 @@ ul {
 .container {
   height: auto;
   display: grid;
+  max-width: 1024px;
+  margin: 0 auto;
   grid-template-columns: 1fr;
   grid-template-rows: minmax(75px);
   grid-template-areas: "navigation" "aside" "main" "footer"; }
@@ -536,10 +538,6 @@ nav {
       display: block;
       margin: 0 auto; } }
 
-.container {
-  max-width: 1024px;
-  margin: 0 auto; }
-
 main {
   margin: 0 0.625em; }
 
@@ -562,6 +560,10 @@ canvas {
   margin-top: 0.625em;
   text-transform: uppercase;
   font-size: 0.625em; }
+
+@media (min-width: 768px) {
+  #trafficChart {
+    max-height: 90%; } }
 
 #social-stats {
   display: flex;

@@ -1,6 +1,8 @@
 .container {
     height: auto;
     display: grid;
+    max-width: 1024px;
+    margin: 0 auto;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(75px);
     // grid-gap: 5px;
