@@ -38,7 +38,7 @@ footer {
 
 main {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: minmax(50px, auto);
     grid-gap: 5px;
     grid-template-areas:
@@ -54,7 +54,7 @@ main {
         "settings";
 
     @include mq (medium) {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 50px 50px 400px 200px 150px 350px 250px;
         grid-template-areas:
             "dash dash"
@@ -65,9 +65,11 @@ main {
             "members activity"
             "message settings"
     }
+
+    @include mq (large) {
+        grid-template-rows: 50px 50px 525px 275px 150px 375px 250px;
+    }
 }
-
-
 
 .dash-head {
     grid-area: dash;

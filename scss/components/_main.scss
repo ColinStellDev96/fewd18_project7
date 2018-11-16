@@ -37,6 +37,9 @@ canvas {
     background-color: $tan-light;
     padding: em(5px) em(5px);
     border-radius: em(5px);
+    @include mq (medium) {
+        width: 200px;
+    }
 }
 
 .social-icon {
@@ -48,10 +51,20 @@ canvas {
     padding: em(5px);
     background-color: $cigar;
     border-radius: em(10px);
+    @include mq (medium) {
+        display: inline-block;
+        height: em(45px);
+        width: em(45px);
+        margin-top: em(5px);
+        margin-left: em(5px);
+    }
 }
 
 .social-content {
     margin: 0 em(15px);
+    @include mq (medium) {
+        display: inline-block;
+    }
 }
 
 .social-content h5,
@@ -64,15 +77,23 @@ canvas {
     color: $cigar;
     margin-top: em(10px);
     margin-bottom: em(10px);
+    @include mq (medium) {
+        margin-top: em(5px);
+        margin-bottom: em(5px);
+        font-size: em(18px);
+    }
+
 }
 
 .social-content p {
     font-size: em(24px);
+    @include mq (medium) {
+        font-size: em(30px);
+    }
 }
 
 .member-section {
     @include flex();
-    justify-content: space-between;
     border-bottom: 1px solid $cigar;
     margin-bottom: em(10px);
     height: em(72px);
@@ -87,6 +108,7 @@ canvas {
 .member-info {
     width: em(170px);
     padding-left: em(5px);
+    flex-grow: 2;
 }
 
 .member-info h5 {
@@ -104,6 +126,11 @@ canvas {
     color: $orange;
 }
 
+.member-email {
+    color: $orange;
+    text-decoration: underline;
+}
+
 // RECENT ACTIVITY
 
 .recent-activity {
@@ -113,7 +140,7 @@ canvas {
 }
 
 .activity-section {
-    @include flex();
+    @include flex(); 
     border-bottom: 1px solid $cigar;
     margin-bottom: em(10px);
     height: em(72px);
@@ -128,6 +155,7 @@ canvas {
 
 .activity-info {
     margin-left: em(10px);
+    flex-grow: 2;
 }
 
 .member-activity {
@@ -142,6 +170,12 @@ canvas {
     color: $orange;
 }
 
+.activity-section i {
+    color: $orange;
+    font-size: em(12px);
+    margin-top: em(15px);
+}
+
 // MESSAGE USER
 
 #user-search {
@@ -151,6 +185,9 @@ canvas {
     background-color: $tan-light;
     border: em(1px) solid $cigar;
     border-radius: em(3px);
+    @include mq (large) {
+        width: 99%;
+    }
 }
 
 #member-search-text {
@@ -174,6 +211,9 @@ canvas {
     font-weight: bold;
     padding: em(10px) em(5px);
     border-radius: em(3px);
+    @include mq (large) {
+        width: 99%;
+    }
 }
 
 // SETTINGS
@@ -199,7 +239,7 @@ canvas {
     -moz-user-select: none;
     -ms-user-select: none;
     @include mq (medium) {
-        padding-left: em(90px);
+        padding-left: em(60px);
     }
 }
 

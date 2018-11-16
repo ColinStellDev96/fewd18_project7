@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let trafficChart = new Chart(traffic, {
         type: 'line',
         data: {
-            labels: hourlyLables,
+            labels: monthlyLables,
             datasets: [{
                 label: '',
-                data: hourlyData,
+                data: monthlyData,
                 backgroundColor: [
                     'rgba(224, 212, 186, 0.6)',
                     'rgba(54, 162, 235, 0.2)',
