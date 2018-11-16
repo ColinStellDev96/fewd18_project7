@@ -410,7 +410,11 @@ nav {
   display: flex; }
 
 .bell-icon {
-  position: relative; }
+  position: relative;
+  transition: all .2s ease-in-out; }
+
+.bell-icon:hover {
+  transform: scale(1.1); }
 
 .bell-icon[data-badge]::after {
   content: attr(data-badge);
@@ -490,6 +494,10 @@ nav {
 
 #site-search {
   width: 13.75em; }
+
+@media (min-width: 768px) {
+  .side-nav .selected {
+    border-bottom: solid 4px #362919; } }
 
 .alert-box {
   display: flex;
