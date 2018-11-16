@@ -38,7 +38,7 @@ footer {
 
 main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: minmax(50px, auto);
     grid-gap: 5px;
     grid-template-areas:
