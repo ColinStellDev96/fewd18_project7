@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const secNav = document.getElementById('secondNav').getElementsByTagName('li');
     const alert = document.getElementById('alert');
     const alertClose = alert.querySelector('i');
+    const userSearch = document.getElementById('user-search');
+    const textArea = document.getElementById('member-search-text');
+    const submit = document.getElementById('user-send');
 
     // CHART DATA
     const hourlyLables = ['9am', '10pm', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
@@ -151,5 +154,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.className += " active";
         });
     }
+
+    //MESSAGE USER
+
+    submit.addEventListener('click', function () {
+        if (userSearch.value === '' || textArea.value === ''){
+            window.alert('Please Enter User Information or A Message');
+        } else {
+            window.alert('Your Message has been submitted');
+        }
+    });
 
 }); // END OF JAVASCRIPT DOM CONTENT LOADER
